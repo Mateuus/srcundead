@@ -6,7 +6,7 @@
 
 #include "WOBackendAPI.h"
 
-	const char*	gDomainBaseUrl= "/conection/vrzapi/";
+	const char*	gDomainBaseUrl= "/conection/api/";
 	int		gDomainPort   = 443; // PAX_BUILD - change to 80 and no SSL
 	bool		gDomainUseSSL = true;
 	

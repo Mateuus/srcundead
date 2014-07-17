@@ -17,7 +17,7 @@ extern int32_t	g_nProjectVersionMajor;
 extern int32_t	g_nProjectVersionMinor;
 
 //--------------------------------------------------------------------------------------------------------
-#define PROJECT_NAME					"ViruZ"
+#define PROJECT_NAME					"Undead Brasil"
 
 
 //--------------------------------------------------------------------------------------------------------

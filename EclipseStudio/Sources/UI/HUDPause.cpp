@@ -376,7 +376,7 @@ if ( gClientLogic().m_gameInfo.mapId != 7 )
 
 
 			char Bcbksgs[64];
-			sprintf(Bcbksgs, "ViruZ Antidupe block");
+			sprintf(Bcbksgs, "UndeadBrasil Antidupe block");
 
 
 			Scaleform::GFx::Value var[3];

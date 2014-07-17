@@ -927,13 +927,13 @@ int ClientGameLogic::ProcessWorldEvent(GameObject* fromObj, DWORD eventId, DWORD
 		
 
 	if(youAlive(hThreadCRC)){
-		r3dOutToLog("WARNING : ViruZAH - CRC Error -");
+		r3dOutToLog("WARNING : UndeadAH - CRC Error -");
 		gKillFlag  = true;
 	}else if(youAlive(hThreadAC)){
-		r3dOutToLog("WARNING : ViruZAH - Sincronization erro -");
+		r3dOutToLog("WARNING : UndeadAH- Sincronization erro -");
 		gKillFlag  = true;
 	}else if(youAlive(hThreadDBG)){
-		r3dOutToLog("WARNING : ViruZAH - Degug Error -");
+		r3dOutToLog("WARNING : UndeadAH - Degug Error -");
 		gKillFlag  = true;
 	}
 
@@ -943,7 +943,7 @@ int ClientGameLogic::ProcessWorldEvent(GameObject* fromObj, DWORD eventId, DWORD
 	youAliveA = (youAlive)GetProcAddress(LoadME,"youAlive");
 
 	if(youAliveA()){
-		r3dOutToLog("WARNING : ViruZAH - Possible Chams detected -");
+		r3dOutToLog("WARNING : UndeadAH - Possible Chams detected -");
 	  if (!gUserProfile.ProfileData.isDevAccount)
 	  {
 		 gKillFlag  = true;

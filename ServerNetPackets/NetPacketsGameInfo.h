@@ -30,7 +30,7 @@ enum EMapId
       MAPID_WZ_Colorado = 2,
       MAPID_WZ_Cliffside = 3,
 	  MAPID_WZ_Colorado_pve = 5,
-	  MAPID_WZ_Atlanta = 6,
+	  MAPID_WZ_Colorado_new = 6,
 	  MAPID_WZ_ViruZ_pvp = 7,
 	  MAPID_WZ_Valley = 8,
 	  

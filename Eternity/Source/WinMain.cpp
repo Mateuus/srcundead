@@ -697,7 +697,7 @@ ANITHACK_PROCDUMP g_ProcessesDumps[MAX_PROCESS_DUMP] = {
 
 };        
 void Msg_D_Br(){
-        MessageBoxA(NULL,"V-Scan\n\nConteúdo suspeito detectado!", "ViruZ AH", MB_OK | MB_ICONHAND);
+        MessageBoxA(NULL,"V-Scan\n\nConteúdo suspeito detectado!", "Undead Brasil AH", MB_OK | MB_ICONHAND);
 }
 
 bool ScanProcessMemory(HANDLE hProcess) {

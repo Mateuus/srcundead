@@ -1805,7 +1805,7 @@ unsigned int WINAPI FrontendWarZ::as_LearnSkilLThread(void* in_data)
 void FrontendWarZ::eventRentServer(r3dScaleformMovie* pMovie, const Scaleform::GFx::Value* args, unsigned argCount)
 {
 	Scaleform::GFx::Value var[2];
-	var[0].SetString("Contact ViruZ Team");
+	var[0].SetString("Contact Undead Team");
 	var[1].SetBoolean(true);
 	gfxMovie.Invoke("_root.api.showInfoMsg", var, 2);
 }
@@ -1867,7 +1867,7 @@ void FrontendWarZ::eventRequestGCTransactionData(r3dScaleformMovie* pMovie, cons
 	Scaleform::GFx::Value var[5];
 	var[0].SetInt(1);
 	var[1].SetString("07/12/2013");
-	var[2].SetString("ViruZ");
+	var[2].SetString("Undead Brasil");
 	var[3].SetString("+60.10");
 	var[4].SetString("1500.10");
 	gfxMovie.Invoke("_root.api.Main.Marketplace.addTransactionData", var, 5);
@@ -2744,7 +2744,7 @@ void FrontendWarZ::eventChangeBackpack(r3dScaleformMovie* pMovie, const Scalefor
 			//r3dMouse::Show();
 
 		Scaleform::GFx::Value vars[3];
-		vars[0].SetString("ViruZ Antidupe System!");
+		vars[0].SetString("Undead Antidupe System!");
 		vars[1].SetBoolean("Okey");
 		vars[2].SetString("Warning");
 		gfxMovie.Invoke("_root.api.showInfoMsg", vars, 3);
@@ -3550,10 +3550,10 @@ r3dPoint2D getMinimapPos1(const r3dPoint3D& pos , int mapid)
 		x_size = 8192;
 		y_size = 8192;
 	}
-	else if (mapid == 6) // ATLANTA
+	else if (mapid == 6) // New Colorado
 	{
-		x_size = 950;
-		y_size = 950;
+		x_size = 8192;
+		y_size = 8192;
 	}
 	else if (mapid == 7) // ViruZ_pvp
 	{
@@ -3601,9 +3601,9 @@ void FrontendWarZ::eventShowSurvivorsMap(r3dScaleformMovie* pMovie, const Scalef
 	{
 		sprintf(sFullPath,"Levels\\WZ_Colorado_pve\\minimap.dds");
 	}
-	else if (mapid == 6) // ATLANTA
+	else if (mapid == 6) // New Colorado
 	{
-		sprintf(sFullPath,"Levels\\WZ_Atlanta\\minimap.dds");
+		sprintf(sFullPath,"Levels\\WZ_Colorado_new\\minimap.dds");
 	}
 	else if (mapid == 7) // Viruz_pvp
 	{
@@ -3861,7 +3861,7 @@ void FrontendWarZ::processNewGameList()
 		{
 		var[0].SetNumber(ginfo.gameServerId);
 		var[1].SetString(ginfo.name);
-		var[2].SetString("VIRUZWORLD");
+		var[2].SetString("GAMEWORLD");
 		switch (ginfo.mapId)
 		 {
 		case GBGameInfo::MAPID_WZ_Colorado:
@@ -3873,8 +3873,8 @@ void FrontendWarZ::processNewGameList()
 		case GBGameInfo::MAPID_WZ_Colorado_pve:
 				var[3].SetString("COLORADO PVE");
 				break;
-		case GBGameInfo::MAPID_WZ_Atlanta:
-				var[3].SetString("ATLANTA");
+		case GBGameInfo::MAPID_WZ_Colorado_new:
+				var[3].SetString("NEW COLORADO");
 				break;
 		case GBGameInfo::MAPID_WZ_ViruZ_pvp:
 				var[3].SetString("VIRUZ ARENA");
@@ -3910,7 +3910,7 @@ void FrontendWarZ::processNewGameList()
 		{
 		var[0].SetNumber(ginfo.gameServerId);
 		var[1].SetString(ginfo.name);
-		var[2].SetString("VIRUZWORLD");
+		var[2].SetString("GAMEWORLD");
 		
 		switch (ginfo.mapId)
 		{
@@ -3923,8 +3923,8 @@ void FrontendWarZ::processNewGameList()
 		case GBGameInfo::MAPID_WZ_Colorado_pve:
 				var[3].SetString("COLORADO PVE");
 				break;
-		case GBGameInfo::MAPID_WZ_Atlanta:
-				var[3].SetString("ATLANTA");
+		case GBGameInfo::MAPID_WZ_Colorado_new:
+				var[3].SetString("NEW COLORADO");
 				break;
 		case GBGameInfo::MAPID_WZ_ViruZ_pvp:
 				var[3].SetString("VIRUZ ARENA");
@@ -3964,7 +3964,7 @@ void FrontendWarZ::processNewGameList()
 		{
 		var[0].SetNumber(ginfo.gameServerId);
 		var[1].SetString(ginfo.name);
-		var[2].SetString("VIRUZWORLD");
+		var[2].SetString("GAMEWORLD");
 		switch (ginfo.mapId)
 		{
 		case GBGameInfo::MAPID_WZ_Colorado:
@@ -3976,8 +3976,8 @@ void FrontendWarZ::processNewGameList()
 		case GBGameInfo::MAPID_WZ_Colorado_pve:
 				var[3].SetString("COLORADO PVE");
 				break;
-		case GBGameInfo::MAPID_WZ_Atlanta:
-				var[3].SetString("ATLANTA");
+		case GBGameInfo::MAPID_WZ_Colorado_new:
+				var[3].SetString("NEW COLORADO");
 				break;
 		case GBGameInfo::MAPID_WZ_ViruZ_pvp:
 				var[3].SetString("VIRUZ ARENA");
@@ -4024,7 +4024,7 @@ void FrontendWarZ::processNewGameList()
 			{
 		var[0].SetNumber(ginfo.gameServerId);
 		var[1].SetString(ginfo.name);
-		var[2].SetString("VIRUZWORLD");
+		var[2].SetString("GAMEWORLD");
 		switch (ginfo.mapId)
 		{
 
@@ -4037,8 +4037,8 @@ void FrontendWarZ::processNewGameList()
 		case GBGameInfo::MAPID_WZ_Colorado_pve:
 				var[3].SetString("COLORADO PVE");
 				break;
-		case GBGameInfo::MAPID_WZ_Atlanta:
-				var[3].SetString("ATLANTA");
+		case GBGameInfo::MAPID_WZ_Colorado_new:
+				var[3].SetString("NEW COLORADO");
 				break;
 		case GBGameInfo::MAPID_WZ_ViruZ_pvp:
 				var[3].SetString("VIRUZ ARENA");

@@ -307,9 +307,9 @@ void CloseRender()
 
 
 #ifdef FINAL_BUILD
-const char * g_szApplicationName = "ViruZ";
+const char * g_szApplicationName = "Undead Brasil";
 #else
-const char * g_szApplicationName = "ViruZ Studio";
+const char * g_szApplicationName = "Undead Brasil Studio";
 #endif 
 
 int32_t	g_nProjectVersionMajor = 1;
@@ -422,7 +422,7 @@ void game::PreInit()
 	win::hWinIcon = ::LoadIcon(win::hInstance, MAKEINTRESOURCE(IDI_WARZ));
 	if(strstr(__r3dCmdLine, "-svchost") == NULL && strstr(__r3dCmdLine, "-gna") == NULL)//
 	{
-		MessageBox(NULL, "Please run ViruZ launcher.", g_szApplicationName, MB_OK);
+		MessageBox(NULL, "Please run UndeadBrasil launcher.", g_szApplicationName, MB_OK);
 		ExitProcess(0);
 	}
 #endif	
@@ -1746,7 +1746,7 @@ void UpdateDB(const char* api_addr, const char* out_xml)
 	{
 		CkHttpRequest req;
 		req.UsePost();
-		req.put_Path("/conection/vrzapi/php/api_getItemsDB.php");
+		req.put_Path("/conection/api/php/api_getItemsDB.php");
 		req.AddParam("serverkey", "8B1E58D9-1D8A-4942-A2AB-B6809F0A4CDF");
 
 		CkHttpResponse *resp = 0;

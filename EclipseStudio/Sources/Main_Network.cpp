@@ -312,8 +312,8 @@ repeat_the_menu:
         r3dGameLevel::SetHomeDir("WZ_Colorado_pve");
         break;
 	    break;
-	case GBGameInfo::MAPID_WZ_Atlanta: 
-        r3dGameLevel::SetHomeDir("WZ_Atlanta");
+	case GBGameInfo::MAPID_WZ_Colorado_new: 
+        r3dGameLevel::SetHomeDir("WZ_Colorado_new");
         break;
 	case GBGameInfo::MAPID_WZ_ViruZ_pvp: 
         r3dGameLevel::SetHomeDir("WZ_ViruZ_pvp");

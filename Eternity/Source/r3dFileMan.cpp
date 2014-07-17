@@ -530,9 +530,9 @@ bool CreateConfigPath(char* dest)
 {
 	if( SUCCEEDED(SHGetFolderPath(NULL, CSIDL_MYDOCUMENTS | CSIDL_FLAG_CREATE, NULL, 0, dest)) ) 
 	{
-		strcat( dest, "\\ViruZmmo\\" );
+		strcat( dest, "\\UndeadBrasil Entertainment\\" );
 		mkdir( dest );
-		strcat( dest, "ViruZ\\" );
+		strcat( dest, "UndeadBrasil\\" );
 		mkdir( dest );
 
 		return true;
@@ -545,9 +545,9 @@ bool CreateWorkPath(char* dest)
 {
 	if( SUCCEEDED(SHGetFolderPath(NULL, CSIDL_LOCAL_APPDATA | CSIDL_FLAG_CREATE, NULL, 0, dest)) ) 
 	{
-		strcat( dest, "\\ViruZmmo\\" );
+		strcat( dest, "\\UndeadBrasil Entertainment\\" );
 		mkdir( dest );
-		strcat( dest, "ViruZ\\" );
+		strcat( dest, "UndeadBrasil\\" );
 		mkdir( dest );
 
 		return true;

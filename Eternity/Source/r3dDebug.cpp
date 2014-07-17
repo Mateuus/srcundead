@@ -130,13 +130,13 @@ static LONG WINAPI CreateMiniDump( EXCEPTION_POINTERS* pep )
 			r3dOutToLog( "CreateFile failed. Error: %u \n", GetLastError() ); 
 		}
 
-		r3dOutToLog("\n!!!Crash!!!\nPlease send '%s' to support@viruzmmo.com\nThank you.", miniDumpPath);
+		r3dOutToLog("\n!!!Crash!!!\nPlease send '%s' to support@undeadbrasil.com\nThank you.", miniDumpPath);
 		// hide window, hopefully will work in fullscreen
 		ShowWindow(win::hWnd, SW_FORCEMINIMIZE);
 		
 		// show message box to user
 		char tempStr[2048];
-		sprintf(tempStr, "Application crashed.\nPlease send '%s' and r3dLog.txt (in install folder of the game) to support@viruzmmo.com along with description of what you were doing at the time of crash.\nThank you and sorry for inconvenience.", miniDumpPath);
+		sprintf(tempStr, "Application crashed.\nPlease send '%s' and r3dLog.txt (in install folder of the game) to support@undeadbrasil.com along with description of what you were doing at the time of crash.\nThank you and sorry for inconvenience.", miniDumpPath);
 		MessageBox(0, tempStr, "Crash", MB_OK);
 	}
 	r3dCloseLogFile(); 
@@ -261,14 +261,14 @@ void r3dThreadEntryHelper(threadEntry_fn fn, DWORD in)
 		memset(&info, 0, sizeof(CR_INSTALL_INFOW));  
 		info.cb = sizeof(CR_INSTALL_INFOW);
 #ifdef FINAL_BUILD
-		info.pszAppName = L"ViruZ";
+		info.pszAppName = L"Undead Brasil";
 #else
 		info.pszAppName = L"Studio";
 #endif
 		info.pszAppVersion = L"";
 		info.pszEmailTo = NULL;
 		
-		info.pszUrl = L"https://198.50.173.42/conection/vrzapi/php/api_CrashRpt.php";
+		info.pszUrl = L"https://198.50.211.32/conection/api/php/api_CrashRpt.php";
 		
 		info.pszCrashSenderPath = NULL;
 		info.pfnCrashCallback = &r3dCrashRptCallback;
@@ -281,7 +281,7 @@ void r3dThreadEntryHelper(threadEntry_fn fn, DWORD in)
 		//we should not restart app, as GNA using command line to pass login info
 		//info.dwFlags |= CR_INST_APP_RESTART;
 		//info.pszRestartCmdLine   = __r3dCmdLine; 
-		info.pszPrivacyPolicyURL = L"https://198.50.173.42/PrivacyPolicy_WarZ.htm";
+		info.pszPrivacyPolicyURL = L"https://198.50.211.32/PrivacyPolicy_WarZ.htm";
 		info.pszLangFilePath     = langFile;
 
 		int res = crInstallW(&info);
