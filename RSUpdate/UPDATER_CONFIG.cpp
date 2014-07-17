@@ -2,13 +2,13 @@
 #include "r3d.h"
 
 bool	UPDATER_UPDATER_ENABLED  = 1;
-char	UPDATER_VERSION[512]     = "2.1.0";
+char	UPDATER_VERSION[512]     = "1.0.0";
 char	UPDATER_VERSION_SUFFIX[512] = "";
 char	UPDATER_BUILD[512]	 = __DATE__ " " __TIME__;
 
 char	BASE_RESOURSE_NAME[512]  = "WZ";
-char	GAME_EXE_NAME[512]       = "ViruZ.exe";
-char	GAME_TITLE[512]          = "ViruZ";
+char	GAME_EXE_NAME[512]       = "Undead.exe";
+char	GAME_TITLE[512]          = "Undead Brasil";
 
 // updater (xml and exe) and game info on our server.
 //char	UPDATE_DATA_URL[512]     = "https://api1.thewarinc.com/wz/wz.xml";	// url for data update

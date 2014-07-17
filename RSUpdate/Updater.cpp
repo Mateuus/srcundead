@@ -360,7 +360,8 @@ bool CUpdater::BuildUpdateList()
 
 void CUpdater::ExtractJobFile(const r3dFS_FileEntry* fe, const CkByteData& cdata)
 {
-  //sprintf(updMsg1_, "Extracting %s\n", fe->name);
+    sprintf(updMsg1_, "Extracting %s\n", fe->name);
+    r3dOutToLog("Extracting %s\n", fe->name);
 
   // check if file exist and have same crc
   DWORD size;
@@ -375,10 +376,11 @@ void CUpdater::ExtractJobFile(const r3dFS_FileEntry* fe, const CkByteData& cdata
   ::MakeSureDirectoryPathExists(fe->name);
   FILE* f = fopen(fe->name, "wb");
   if(f == NULL) {
-    char msg[1024];
+	  return;
+   /* char msg[1024];
     sprintf(msg, "Can't replace file %s\nPlease delete this file manually", fe->name);
     FailUpdate(msg);
-    r3dError(msg);
+    r3dError(msg);*/
   }
 
   BYTE* out_data;
@@ -421,6 +423,7 @@ void CUpdater::FinalizeJob(const updjob_s& job)
 
   prgTotal_.cur += fe->csize;
 
+  r3dOutToLog("FinalizeJob %s\n", fe->name);
   if(fe->flags & r3dFS_FileEntry::FLAG_EXTRACT) {
     ExtractJobFile(fe, job.data);
   }
