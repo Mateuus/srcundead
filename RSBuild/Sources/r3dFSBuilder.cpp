@@ -268,7 +268,9 @@ DWORD r3dFSBuilder::DetectFileFlags(const char* fname)
   if(pattern_match(fname, "*.exe") || 
      pattern_match(fname, "*.dll") || 
      pattern_match(fname, "*.manifest") || 
-     pattern_match(fname, "crashrpt*.ini"))
+     pattern_match(fname, "crashrpt*.ini") ||
+	 pattern_match(fname, "PhysXLib.dll") ||
+	 pattern_match(fname, "PhysXMon.dll"))
   {
     return r3dFS_FileEntry::FLAG_EXTRACT;
   }
