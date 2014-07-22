@@ -201,6 +201,7 @@ int CUserClans::ApiClanGetLeaderboard()
 	CWOBackendReq req(&gUserProfile, "api_ClanGetInfo.aspx");
 	req.AddParam("CharID", gUserProfile.ProfileData.ArmorySlots[gUserProfile.SelectedCharID].LoadoutID);
 	req.AddParam("func", "lb");
+
 	if(!req.Issue())
 	{
 		return GetResultCode2("ApiClanGetLeaderboard", req);

@@ -37,12 +37,16 @@ BOOL obj_DroppedItem::Load(const char *fname)
 
 BOOL obj_DroppedItem::OnCreate()
 {
+	m_bEnablePhysics = false;
+
 	r3d_assert(m_Item.itemID);
 	
 	const char* cpMeshName = "";
 	if(m_Item.itemID == 'GOLD')
 	{
-		cpMeshName = "Data\\ObjectsDepot\\Weapons\\Item_Money_Stack_01.sco";
+		//cpMeshName = "Data\\ObjectsDepot\\Weapons\\Item_Money_Stack_01.sco";
+		 cpMeshName = "Data\\ObjectsDepot\\Weapons\\Item_Lootcrate_01.sco";
+		
 	}
 	else
 	{

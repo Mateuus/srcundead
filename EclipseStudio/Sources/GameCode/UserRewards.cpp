@@ -34,8 +34,13 @@ void CGameRewards::InitDefaultRewards()
 	// HERE is COPY-PASTED CODE FROM ExportDefaultRewards()
 	// USED FOR SERVER
 
-	SetReward(1, "ZombieKill", 10, 10, 20, 20);
+	/*SetReward(1, "ZombieKill", 10, 10, 20, 20);
 	SetReward(2, "PlayerKill", 20, 20, 40, 40); // 15 = Normal 20 = Hardcore (exp) //KILLXP
+	SetReward(3, "PlayerKill", 30, 30, 40, 40);*/
+
+	SetReward(1, "ZombieKill",  30, 35, 30, 35);
+	SetReward(2, "PlayerKill",  20, 20, 40, 40); // 15 = Normal 20 = Hardcore (exp) //KILLXP
+	SetReward(3, "ZombieKillP", 90, 95, 90, 95);
 }
 
 void CGameRewards::ExportDefaultRewards()
