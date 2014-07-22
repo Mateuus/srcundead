@@ -6,12 +6,15 @@
 /* @(#) $Id$ */
 
 #include "zutil.h"
+#ifndef Z_SOLO
+#  include "gzguts.h"
+#endif
 
 #ifndef NO_DUMMY_DECL
 struct internal_state      {int dummy;}; /* for buggy compilers */
 #endif
 
-const char * const z_errmsg[10] = {
+z_const char * const z_errmsg[10] = {
 "need dictionary",     /* Z_NEED_DICT       2  */
 "stream end",          /* Z_STREAM_END      1  */
 "",                    /* Z_OK              0  */
