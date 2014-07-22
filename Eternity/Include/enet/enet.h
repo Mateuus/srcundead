@@ -25,7 +25,7 @@ extern "C"
 
 #define ENET_VERSION_MAJOR 1
 #define ENET_VERSION_MINOR 2
-#define ENET_VERSION_PATCH 3
+#define ENET_VERSION_PATCH 5
 #define ENET_VERSION_CREATE(major, minor, patch) (((major)<<16) | ((minor)<<8) | (patch))
 #define ENET_VERSION ENET_VERSION_CREATE(ENET_VERSION_MAJOR, ENET_VERSION_MINOR, ENET_VERSION_PATCH)
 
@@ -201,7 +201,7 @@ enum
    ENET_PEER_WINDOW_SIZE_SCALE            = 64 * 1024,
    ENET_PEER_TIMEOUT_LIMIT                = 32,
    ENET_PEER_TIMEOUT_MINIMUM              = 5000,
-   ENET_PEER_TIMEOUT_MAXIMUM              = 20000,
+   ENET_PEER_TIMEOUT_MAXIMUM              = 30000,
    ENET_PEER_PING_INTERVAL                = 500,
    ENET_PEER_UNSEQUENCED_WINDOWS          = 64,
    ENET_PEER_UNSEQUENCED_WINDOW_SIZE      = 1024,
@@ -218,6 +218,7 @@ typedef struct _ENetChannel
    enet_uint16  usedReliableWindows;
    enet_uint16  reliableWindows [ENET_PEER_RELIABLE_WINDOWS];
    enet_uint16  incomingReliableSequenceNumber;
+   enet_uint16  incomingUnreliableSequenceNumber;
    ENetList     incomingReliableCommands;
    ENetList     incomingUnreliableCommands;
 } ENetChannel;
@@ -376,7 +377,6 @@ typedef struct _ENetEvent
    enet_uint8           channelID; /**< channel on the peer that generated the event, if appropriate */
    enet_uint32          data;      /**< data associated with the event, if appropriate */
    ENetPacket *         packet;    /**< packet associated with the event, if appropriate */
-   float		time;
 } ENetEvent;
 
 /** @defgroup global ENet global functions
